@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <!-- the head tag was misspelled as header -->
+  <head>
+    <title>Welcome to Our Website</title>
+    <!-- the meta tag missed the closing '/' -->
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <!-- the h1 openning tag was closed with an h2 closing tag -->
+    <h1>Welcome to Our Amazing Website!</h1>
+
+    <!-- it is better to use the nav tag directlly -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="main-content">
+      <!-- the h2 openning tag was closed with an h1 closing tag -->
+      <h2>About Us</h2>
+      <p>
+        We are a company dedicated to providing excellent service to our
+        customers.
+      </p>
+      <!-- to call the image source we must use the SRC not href as href is used for hyperlinks -->
+      <img src="images/company-photo.jpg" width="100" />
+    </div>
+
+    <div id="contact-form">
+      <form action="submit.php" method="post">
+        <label>Name:</label><br />
+        <input type="text" name="name" /><br />
+        <label>Email:</label><br />
+        <!-- for the email input we must declare the type as email -->
+        <input type="email" name="email" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!-- for the footer we could use the footer tag instead of a div -->
+    <footer class="footer">
+      <p>Copyright 2024 Our Company. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
