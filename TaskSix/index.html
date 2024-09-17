@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive CSS Grid Layout</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        height: 90vh; /* Full viewport height */
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em;
+        grid-area: header;
+      }
+      footer {
+        background-color: #535151;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        grid-area: footer;
+      }
+      .main-content {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        grid-area: main-content;
+      }
+      .sidebar {
+        background-color: #e2e2e2;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        grid-area: sidebar;
+      }
+      /* Desktop layout */
+      @media (min-width: 768px) {
+        .container {
+          grid-template-columns: 70% 30%;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "header header"
+            "main-content sidebar"
+            "footer footer";
+        }
+      }
+      /* Mobile layout */
+      @media (max-width: 767px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "header"
+            "main-content"
+            "sidebar"
+            "footer";
+        }
+        .sidebar {
+          background-color: #f9f9f9;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Responsive Webpage Layout</header>
+      <div class="main-content">
+        <h2>Main Content</h2>
+        <p>
+          This is the main content area. It takes up 70% of the width of the
+          page on desktop screens.
+        </p>
+        <p>
+          Use this space to display articles, blog posts, or any important
+          content.
+        </p>
+      </div>
+      <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>
+          This is the sidebar area. It occupies 30% of the width of the page on
+          desktop screens.
+        </p>
+        <p>Use this space for links, widgets, or any additional information.</p>
+      </div>
+      <footer>&copy; 2024 Your Website</footer>
+    </div>
+  </body>
+</html>
