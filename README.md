@@ -6,6 +6,8 @@
 
 # link to the hosted and fixed form (task 2) : https://fixed-form-ayad.vercel.app/
 
+# I also hosted the php part, you can check the following link : (http://form-api.rf.gd/submit.php)
+
 ![alt text](https://github.com/AyadZakaria/task-blog/blob/main/form-preview.png?raw=true)
 
 # i have all the changes commented at the index.html (task 3)
