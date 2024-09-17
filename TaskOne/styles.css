@@ -118,7 +118,8 @@ header p {
 .section-reverse .image img {
   max-width: 90%;
   border-radius: 1em;
-  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 .section .text,
 .section-reverse .text {
@@ -229,7 +230,7 @@ header p {
   color: var(--brand-color);
 }
 
-.post h3 {
+.post h1 {
   font-size: large;
   font-weight: 550;
 }
